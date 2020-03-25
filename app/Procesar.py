@@ -714,4 +714,4 @@ while 1:
     # Proceso 6: Actualizacion de firmware
     #---------------------------------------------------------
     #NOTA: Acer actualizacion de firmware despeue de actualizar usuarios
-    Actualizar_Firmware("10:16 PM") # 12:00 AM     03:59 PM 04:07 PM # hora chile  11:00 PM
+    Actualizar_Firmware("12:27 PM") # 12:00 AM     03:59 PM 04:07 PM # hora chile  11:00 PM
