@@ -180,12 +180,19 @@ def actualizar_usuarios_por():
         Us_acti=U_Activos(T_A)
         if Us_acti!='NO':
                 s = Us_acti.text
-                s= Filtro_Caracteres (s)
-                Escrivir_nuevo(0,s)
-                print "ACTUALIZADO por"
-                Borrar(1)		#vaciar usurios lectura
-                Guardar_usuarios_sin_salir()
-                return 1
+                #print s
+                #print s.find("Access denied") #mejorar  el filtro
+                if s.find("Access denied") == -1: #mejorar  el filtro
+                    s= Filtro_Caracteres (s)
+                    Escrivir_nuevo(0,s)
+                    print "ACTUALIZADO por"
+                    Borrar(1)		#vaciar usurios lectura
+                    Guardar_usuarios_sin_salir()
+                    return 1
+                else:
+                    print "No se puedo Actualizar por"#Us_acti
+                    return -1
+                
         else :
                 print "No se puedo Actualizar por"#Us_acti
                 return -1
@@ -205,14 +212,18 @@ def Procedimiento_Actualizar_Usuarios():
     if Us_acti!='NO':
         s = Us_acti.text
         #print "Usuarios:"+ s
-        s= Filtro_Caracteres (s)
-        #print s
-        Escrivir_nuevo(0,s)
-        R_Actualizacion=0
-        A_Actualizacion=0
-        print "ACTUALIZADO"
-        Borrar(1)		#vaciar usurios lectura
-        Guardar_usuarios_sin_salir()
+        if s.find("Access denied") == -1: #mejorar  el filtro
+            s= Filtro_Caracteres (s)
+            #print s
+            Escrivir_nuevo(0,s)
+            R_Actualizacion=0
+            A_Actualizacion=0
+            print "ACTUALIZADO"
+            Borrar(1)		#vaciar usurios lectura
+            Guardar_usuarios_sin_salir()
+        else :
+            print "No se puedo Actualizar"#Us_acti
+            R_Actualizacion=1 # actualizar en otromomento
     else :
         print "No se puedo Actualizar"#Us_acti
         R_Actualizacion=1 # actualizar en otromomento
