@@ -672,7 +672,7 @@ while 1:
     #---------------------------------------------------------
     # Proceso 2: Actualizacion de usuarios para revicion de usuarios sin internet
     #---------------------------------------------------------
-    Actualizar_Usuarios("11:30 AM") # 12:00 AM     03:59 PM # hora chile  10:00 PM
+    Actualizar_Usuarios("12:10 AM") # 12:00 AM     03:59 PM # hora chile  10:00 PM
 
     #---------------------------------------------------------
     # Proceso 3: Procesamiento del PIN
@@ -714,4 +714,4 @@ while 1:
     # Proceso 6: Actualizacion de firmware
     #---------------------------------------------------------
     #NOTA: Acer actualizacion de firmware despeue de actualizar usuarios
-    Actualizar_Firmware("12:27 PM") # 12:00 AM     03:59 PM 04:07 PM # hora chile  11:00 PM
+    Actualizar_Firmware("01:00 AM") # 12:00 AM     03:59 PM 04:07 PM # hora chile  11:00 PM
