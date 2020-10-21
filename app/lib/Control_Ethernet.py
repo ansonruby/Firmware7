@@ -18,6 +18,7 @@ CE_url = "http:+++++++"
 IP_servidorP    = 'http://18.237.109.221'                # Pruebas
 #IP_servidorP    = 'http://192.168.0.4'                # Pruebas
 IP_servidor     = 'http://34.210.5.192'                 # Servidor
+IP_servidor     = 'http://34.213.55.39'                 # Servidor
 
 #MAC_DIRC        = 'cat /sys/class/net/eth0/address'
 MAC_DIRC        = 'cat /sys/class/net/wlan0/address'
